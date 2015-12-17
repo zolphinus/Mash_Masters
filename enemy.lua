@@ -2,13 +2,15 @@
 module 'enemy'
 local enemy = {}
 
-function enemy.new(level, maxHP, expValue)
+function enemy.new(stats)
 
 	local self = {};
-	self.level = level;
-	self.maxHP = maxHP;
-	self.curHP = maxHP;
-	self.expValue = expValue;
+	self.level = stats.level;
+	self.maxHP = stats.maxHP;
+	self.curHP = stats.maxHP;
+	self.expValue = stats.expValue;
+	
+	
 	
 	return self;
 end
