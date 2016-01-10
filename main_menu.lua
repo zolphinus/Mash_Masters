@@ -44,12 +44,19 @@ function scene:show( event )
       -- Called when the scene is now on screen.
       -- Insert code here to make the scene come alive.
       -- Example: start timers, begin animation, play audio, etc.
+		local game_title = display.newImage("title_bg.png")
+		game_title.alpha = 0.5
+		sceneGroup:insert(game_title)
+		game_title.x = display.contentWidth / 2
+		game_title.y = display.contentHeight / 2
+		transition.to(game_title, {alpha = 1, time = 100})
+	  
 		local function checkPress(event)
 			
 			if event.phase == "began" then
 				local options = {
 				   effect = "fade",
-				   time = 1000
+				   time = 500
 				}
 				
 				composer.gotoScene("main_game", options)

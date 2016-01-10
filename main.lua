@@ -1,4 +1,4 @@
-
+display.setStatusBar( display.HiddenStatusBar)
 local composer = require("composer")
 local scene = composer.newScene()
 
@@ -8,4 +8,4 @@ local options = {
    time = 1000
 }
 
-composer.gotoScene("main_menu", options)
+composer.gotoScene("qg_splash", options)
